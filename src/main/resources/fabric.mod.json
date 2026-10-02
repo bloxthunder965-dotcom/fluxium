@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "fluxium",
+	"version": "${version}",
+	"name": "Fluxium",
+	"description": "Client-side performance optimization mod. Intelligently manages Minecraft client workload to improve FPS, frame-time consistency, CPU, memory, chunk processing, rendering and network handling without changing vanilla gameplay.",
+	"authors": [
+		"Fluxium Team"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/fluxium",
+		"sources": "https://github.com/bloxthunder965-dotcom/fluxium"
+	},
+	"license": "MIT",
+	"icon": "assets/fluxium/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.fluxium.client.FluxiumClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "fluxium.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "fluxium.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"sodium": "*",
+		"lithium": "*",
+		"iris": "*"
+	}
+}

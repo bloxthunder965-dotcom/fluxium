@@ -1,0 +1,18 @@
+{
+	"required": true,
+	"package": "dev.fluxium.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"GameRendererMixin",
+		"LevelRendererMixin",
+		"ChunkRenderDispatcherMixin",
+		"ClientPacketListenerMixin",
+		"EntityRenderDispatcherMixin"
+	],
+	"injectors": {
+		"defaultRequire": 0
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
